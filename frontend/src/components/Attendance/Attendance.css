@@ -1,0 +1,151 @@
+.attendance-container {
+  width: 100%;
+  /* height: 100%; */
+  padding: 20px;
+  box-sizing: border-box;
+  background-color: #020617;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.attendance-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  padding-bottom: 15px;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.attendance-title {
+  margin: 0;
+  color: #2c3e50;
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+.attendance-actions {
+  display: flex;
+  gap: 10px;
+}
+
+.table-container {
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  margin-bottom: 20px;
+}
+
+.attendance-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.attendance-table th,
+.attendance-table td {
+  padding: 12px 8px;
+  text-align: center;
+  border: 1px solid #e0e0e0;
+  min-width: 40px;
+  height: 40px;
+}
+
+.attendance-table th {
+  background-color: #f5f7fa;
+  color: #4a5568;
+  font-weight: 600;
+  text-transform: uppercase;
+  font-size: 0.75rem;
+  letter-spacing: 0.05em;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  border-bottom: 2px solid #e2e8f0;
+}
+
+.employee-name-cell {
+  position: sticky;
+  left: 0;
+  background-color: white;
+  z-index: 5;
+  min-width: 200px;
+  text-align: left !important;
+  padding-left: 16px !important;
+  font-weight: 500;
+  color: #2d3748;
+  box-shadow: 2px 0 5px -2px rgba(0, 0, 0, 0.1);
+}
+
+.weekend {
+  background-color: #f8f9fa;
+  color: #a0aec0;
+}
+
+.weekend .Mui-checked {
+  color: #a0aec0 !important;
+}
+
+.pagination-container {
+  display: flex;
+  justify-content: flex-end;
+  padding: 10px 0;
+  background: white;
+  border-radius: 0 0 8px 8px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+}
+
+/* Custom scrollbar */
+.table-scroll-container {
+  max-height: calc(100vh - 220px);
+  overflow-x: auto;
+  overflow-y: auto;
+  scrollbar-width: thin;
+  scrollbar-color: #cbd5e0 #f1f1f1;
+}
+
+.table-scroll-container::-webkit-scrollbar {
+  height: 8px;
+  width: 8px;
+}
+
+.table-scroll-container::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 4px;
+}
+
+.table-scroll-container::-webkit-scrollbar-thumb {
+  background-color: #cbd5e0;
+  border-radius: 4px;
+}
+
+.table-scroll-container::-webkit-scrollbar-thumb:hover {
+  background: #a0aec0;
+}
+
+/* Hover effects */
+.attendance-table tbody tr:hover {
+  background-color: #f7fafc;
+}
+
+.attendance-table tbody tr:hover .employee-name-cell {
+  background-color: #f7fafc;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .attendance-container {
+    padding: 10px;
+  }
+  
+  .employee-name-cell {
+    min-width: 150px;
+    font-size: 0.9rem;
+  }
+  
+  .attendance-table th,
+  .attendance-table td {
+    padding: 8px 4px;
+    font-size: 0.8rem;
+  }
+}

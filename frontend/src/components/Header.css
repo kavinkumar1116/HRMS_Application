@@ -1,0 +1,334 @@
+.hrms-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.75rem 1.5rem;
+  border-bottom: 1px solid #e2e8f0;
+  background-color: #0f172a;
+  color: #f9fafb;
+  z-index: 1000;
+  height: 64px;
+  box-sizing: border-box;
+}
+
+.hrms-header-left {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.hrms-logo {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.hrms-logo-mark {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  border-radius: 999px;
+  background: linear-gradient(135deg, #22c55e, #22d3ee);
+  font-weight: 700;
+  font-size: 0.9rem;
+  color: #0f172a;
+}
+
+.hrms-logo-text {
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  font-size: 0.9rem;
+}
+
+.hrms-nav {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.hrms-nav a, .dropbtn {
+  color: #cbd5f5;
+  font-size: 0.9rem;
+  text-decoration: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0.5rem 0.75rem;
+  border-radius: 0.375rem;
+  transition: all 0.2s ease;
+}
+
+/* Dropdown container */
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+/* Dropdown button */
+.dropbtn {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+  padding-right: 1.5rem;
+}
+
+.dropbtn::after {
+  content: '▼';
+  font-size: 0.6rem;
+  margin-left: 0.25rem;
+  position: absolute;
+  right: 0.5rem;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+/* Dropdown content (hidden by default) */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #1e293b;
+  min-width: 200px;
+  border-radius: 0.375rem;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  z-index: 1000;
+  border: 1px solid #334155;
+  overflow: hidden;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+  color: #e2e8f0;
+  padding: 0.75rem 1rem;
+  text-decoration: none;
+  display: block;
+  transition: background-color 0.2s ease;
+  font-size: 0.9rem;
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {
+  background-color: #334155;
+  color: #22c55e;
+}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+/* Change the background color of the dropdown button when the dropdown content is shown */
+.dropdown:hover .dropbtn {
+  background-color: rgba(34, 197, 94, 0.1);
+  color: #22c55e;
+}
+
+/* Active state for dropdown items */
+.dropdown-content a.active {
+  background-color: #22c55e;
+  color: #0f172a;
+  font-weight: 600;
+}
+
+.hrms-nav a.active {
+  color: #fcfffd;
+  font-weight: 600;
+}
+
+.hrms-header-right {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.hrms-header-icon-button {
+  background: transparent;
+  border-radius: 999px;
+  padding: 0.35rem 0.55rem;
+  border: 1px solid transparent;
+  color: inherit;
+}
+
+.hrms-header-icon-button:hover {
+  border-color: #334155;
+  background-color: #020617;
+}
+
+.hrms-profile {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.hrms-avatar {
+  width: 32px;
+  height: 32px;
+  border-radius: 999px;
+  background-color: #1f2937;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+.hrms-profile-info {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.hrms-profile-name {
+  font-size: 0.85rem;
+}
+
+.hrms-logout-btn,
+.hrms-login-btn {
+  margin-top: 0.1rem;
+  border-radius: 999px;
+  border: 1px solid #22c55e;
+  padding: 0.25rem 0.8rem;
+  font-size: 0.75rem;
+  background-color: #16a34a;
+  color: #0f172a;
+  font-weight: 600;
+}
+
+.hrms-logout-btn:hover,
+.hrms-login-btn:hover {
+  background-color: #22c55e;
+}
+
+.hrms-logout-backdrop {
+  position: fixed;
+  inset: 0;
+  background-color: rgba(15, 23, 42, 0.7);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 50;
+}
+
+.hrms-logout-modal {
+  background-color: #020617;
+  border-radius: 10px;
+  padding: 1.25rem 1.5rem 1.5rem;
+  border: 1px solid #1f2937;
+  min-width: 260px;
+  color: #e5e7eb;
+  text-align: center;
+}
+
+.hrms-logout-modal h3 {
+  margin-top: 0;
+  margin-bottom: 1rem;
+  font-size: 1rem;
+}
+
+.hrms-logout-actions {
+  display: flex;
+  justify-content: center;
+  gap: 0.75rem;
+}
+
+.hrms-logout-actions button {
+  border-radius: 999px;
+  padding: 0.35rem 0.9rem;
+  font-size: 0.8rem;
+  border: 1px solid #4b5563;
+  background-color: #020617;
+  color: #e5e7eb;
+}
+
+.hrms-logout-actions button.confirm {
+  border-color: #ef4444;
+  background-color: #b91c1c;
+}
+
+.hrms-logout-actions button.confirm:hover {
+  background-color: #dc2626;
+}
+
+.hrms-nav-dropdown {
+  position: relative;
+}
+
+.hrms-nav-dropdown-toggle {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  color: #cbd5f5;
+  font-size: 0.9rem;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  transition: color 0.2s ease;
+}
+
+.hrms-nav-dropdown-toggle:hover,
+.hrms-nav-dropdown-toggle.active {
+  color: #22c55e;
+}
+
+.hrms-nav-dropdown-toggle svg {
+  transition: transform 0.2s ease;
+}
+
+.hrms-nav-dropdown-toggle.active svg {
+  transform: rotate(180deg);
+}
+
+.hrms-nav-dropdown-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  margin-top: 0.5rem;
+  background-color: #020617;
+  border: 1px solid #1f2937;
+  border-radius: 8px;
+  padding: 0.5rem 0;
+  min-width: 160px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+  z-index: 100;
+  animation: dropdownFadeIn 0.2s ease;
+}
+
+@keyframes dropdownFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-5px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.hrms-nav-dropdown-menu a {
+  display: block;
+  padding: 0.6rem 1rem;
+  color: #cbd5f5;
+  font-size: 0.9rem;
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+
+.hrms-nav-dropdown-menu a:hover {
+  background-color: #1f2937;
+  color: #22c55e;
+}
+
+.hrms-nav-dropdown-menu a.active {
+  background-color: #1f2937;
+  color: #22c55e;
+  font-weight: 600;
+}
+
+

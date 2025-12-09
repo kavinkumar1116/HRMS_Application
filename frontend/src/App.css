@@ -1,0 +1,98 @@
+.health-section {
+  padding: 1.5rem;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  text-align: left;
+  background-color: #f8fafc;
+}
+
+.health-section h2 {
+  margin-bottom: 1rem;
+}
+
+.health-section .status {
+  color: #16a34a;
+  font-weight: 600;
+}
+
+.health-section .error {
+  color: #dc2626;
+  font-weight: 600;
+}
+
+.login-page {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.login-card {
+  width: 100%;
+  max-width: 360px;
+  background-color: #020617;
+  border-radius: 12px;
+  padding: 1.75rem 2rem 2rem;
+  border: 1px solid #1f2937;
+  color: #e5e7eb;
+}
+
+.login-card h1 {
+  margin: 0 0 0.5rem;
+  font-size: 1.4rem;
+}
+
+.login-subtitle {
+  margin: 0 0 1.25rem;
+  font-size: 0.85rem;
+  color: #9ca3af;
+}
+
+.login-error {
+  margin-bottom: 0.75rem;
+  font-size: 0.8rem;
+  color: #fecaca;
+}
+
+.login-form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.login-form label {
+  font-size: 0.8rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.login-form input {
+  border-radius: 6px;
+  border: 1px solid #4b5563;
+  padding: 0.4rem 0.6rem;
+  font-size: 0.9rem;
+  background-color: #020617;
+  color: #e5e7eb;
+}
+
+.login-form input:focus {
+  outline: none;
+  border-color: #22c55e;
+}
+
+.login-form button {
+  margin-top: 0.75rem;
+  border-radius: 999px;
+  border: 1px solid #22c55e;
+  padding: 0.5rem 1.2rem;
+  font-size: 0.9rem;
+  background-color: #16a34a;
+  color: #0f172a;
+  font-weight: 600;
+}
+
+.login-form button:disabled {
+  opacity: 0.6;
+  cursor: default;
+}
